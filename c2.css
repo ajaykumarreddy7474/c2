@@ -12,7 +12,7 @@ body{
     padding: 10px;
     height: 60px;
     bottom: 2%;
-    right: 2%;
+    left: 2%;
     border-radius: 12px;
     display: none;
     text-align: center;
@@ -21,7 +21,7 @@ body{
 }
 @keyframes anix {
     from{
-        right: -10%;
+        left: -10%;
     }
 }
 .notifyCard h1{
@@ -220,12 +220,13 @@ button#reset{
 }
 .allProductListBox{
     width: 100%;
-    height: 54vh;
+    height: 52vh;
     overflow-y: auto;   
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    
+    border:1px solid grey;
+    border-radius: 4px;
 }
 .allProductListBox::-webkit-scrollbar {
     width: 4px; 
@@ -240,16 +241,13 @@ button#reset{
     border-radius: 1px;
 }
 
-.checkOut{
-    width: 100%;
-    height: 20vh;
-    background: rgb(223, 244, 244);
-    margin-bottom: 10px;
-}
+
 .paymentBtns{
     width: 100%;
     height: 5vh;
-    background: rgb(236, 211, 211);
+    background: #f2f2f2;
+    border:1px solid grey;
+    border-radius: 4px;
 }
 
 
@@ -266,6 +264,7 @@ button#reset{
     flex-direction: row;
     gap: 10px;
     position: relative;
+    margin-left: 5px;
 }
 
 img.sideItemImage{
@@ -348,6 +347,27 @@ button#removeSide{
     margin-left: 10px;
     display: none;
     cursor: pointer;
+}
+.checkOut{
+    width: 100%;
+    height: 20vh;
+    border:1px solid grey;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    line-height: 8px;
+
+}
+.cO{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12px;
+    align-items: center;
+}
+.cO h1{
+    font-size: 20px;
+}
+.cO span{
+    font-size: 16px;
 }
 
 @media (max-width:1080px){

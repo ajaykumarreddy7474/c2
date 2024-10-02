@@ -21,7 +21,33 @@ let reset=document.getElementById('reset')
 let itemsCase = document.querySelector('.itemsCase');
 let sidedetails = document.querySelector('.sidedetails');
 let allProductListBox = document.querySelector('.allProductListBox');
+let checkOut = document.querySelector('.checkOut');
+
+let SubTotal=document.querySelector('.Sub-Total span')
+let discount=document.querySelector('.discount span')
+let tax=document.querySelector('.tax span')
+let totalPay=document.querySelector('.totalPay span')
+
 /* ------------------------------------ - ----------------------------------- */
+discount.textContent = '3'  ;
+function updateSubTotal() {
+  let subtotal = 0;
+
+  // Loop through all products in the side cart
+  const sideProducts = allProductListBox.querySelectorAll('.sideProducts');
+  sideProducts.forEach(product => {
+    const productCost = parseFloat(product.querySelector('.sideCost').textContent.replace('$', ''));
+    subtotal += productCost;
+  });
+
+
+  SubTotal.textContent = subtotal.toFixed(2);
+
+
+  const taxAmount = subtotal * (parseFloat(tax.textContent) / 100);
+  const discountAmount = subtotal * (parseFloat(discount.textContent) / 100);
+  totalPay.textContent = (subtotal + taxAmount - discountAmount).toFixed(2);
+}
 
 removeSide.addEventListener('click',()=>{
   sidedetails.style.display='none'
@@ -37,6 +63,9 @@ fetch('./wholeProducts.json')
   .then(wholeProducts => {
     wholeProducts.forEach(product => {
 /* ------------------------------------Items count----------------------------------- */
+
+
+
     let AllCountNumber=wholeProducts.length
     AllCount.textContent=AllCountNumber;
 
@@ -69,17 +98,17 @@ fetch('./wholeProducts.json')
 
 
       addBtn.addEventListener('click', () => {
-      
+
+        
         ncTitle.textContent=`Order ${product.menuTitle} added to Order Details`
         setTimeout(() => {
           notifyCard.style.display = 'block'; 
-      
-          
           setTimeout(() => {
               notifyCard.style.display = 'none'; 
           }, 4000); 
       },0);
-
+      
+   
         const existingProduct = allProductListBox.querySelector(`.sideProducts[data-title="${product.menuTitle}"]`);
      
         
@@ -115,8 +144,10 @@ fetch('./wholeProducts.json')
           let counter=document.createElement('div');
           counter.classList.add('counter');
        
-          let counterValue=1;
+          let counterValue=0;
+         
       
+   
           
           let cUp=document.createElement('button');
           cUp.classList.add('cUp')
@@ -134,15 +165,22 @@ fetch('./wholeProducts.json')
           counterValue++;
             ctitle.textContent = counterValue;
             sideCost.textContent='$'+(product.price*counterValue).toFixed(2);
+            updateSubTotal();
+
            })
            cDown.addEventListener('click',()=>{
-            if (counterValue > 1) { 
+            if (counterValue > 0) { 
               counterValue--;
               ctitle.textContent = counterValue; 
               sideCost.textContent='$'+(product.price*counterValue).toFixed(2);
+              updateSubTotal();
           }
-           })
-         
+
+    })
+
+
+
+
           counter.appendChild(cDown);
           counter.appendChild(ctitle);
           counter.appendChild(cUp);
@@ -153,14 +191,16 @@ fetch('./wholeProducts.json')
 
           cancelBtn.addEventListener('click',()=>{
             sideProducts.remove(sidedetails)
+            updateSubTotal();
           })
-
+         
           reset.addEventListener('click',()=>{
+            updateSubTotal();
             sideProducts.remove(sidedetails)
+          
           })
+          
 /* -------------------------------------------------- */
-
-
           sideProducts.appendChild(sideItemImage);
           sideProducts.appendChild(sideTextBox)
           sideProducts.appendChild(cancelBtn)
@@ -171,9 +211,6 @@ fetch('./wholeProducts.json')
           countBox.appendChild(counter)
           allProductListBox.appendChild(sideProducts);
 
-            
-
-      
         }else {
           alert(`The product "${product.menuTitle}" is already added to the sidebox.`);
         }
@@ -233,7 +270,6 @@ filterItems.map((i)=>{
     });
   }
 
-  
   
   
   
