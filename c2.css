@@ -1,0 +1,376 @@
+body{
+    font-family: poppins;
+    background: #eae8e8;
+    overflow-x: hidden;
+}
+
+.notifyCard{
+    background: white;
+    border: 1px solid grey;
+    position: absolute;
+    width: 28vw;
+    padding: 10px;
+    height: 60px;
+    bottom: 2%;
+    right: 2%;
+    border-radius: 12px;
+    display: none;
+    text-align: center;
+    position: fixed;
+    animation:anix 1s ease-out
+}
+@keyframes anix {
+    from{
+        right: -10%;
+    }
+}
+.notifyCard h1{
+    font-size: 20px;
+}
+
+.nav{
+    width: 99vw;
+    height: 7vh;
+    background: rgb(237, 224, 208);
+}
+
+.whole{
+    width: 100%;
+    height: 88vh;
+    margin-top: 14px;
+    display: flex;
+    gap:10px;
+}
+.leftside{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+}
+.cats{
+    /* background:rgb(219, 219, 241); */
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    
+}
+.cats button{
+border:1px solid grey;
+padding: 6px 12px;
+font-size: 20px;
+border-radius: 5px;
+display: flex;
+gap: 4px;
+align-items: center;
+cursor: pointer;
+
+}
+.cats .sp{
+    width: 30px;
+    font-size: 20px;
+    height: 24px;
+    text-align: center;
+    border-radius:5px;
+    background: black;
+    color: white;
+}
+
+.products {
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.itemsCase {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px; 
+   
+}
+
+.products .box {
+    height: 200px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box; 
+    border-radius: 5px;
+    position: relative;
+    border-radius: 5px;
+}
+
+
+.texts{
+
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;    
+    margin-top: -12px;
+    
+
+}
+.tCost{
+    font-size: 16px;
+    margin-left: 10px;
+}
+button.item-btn {
+    background: black;
+    color:white;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+   margin-right: 8px;
+}
+button.item-btn:active{
+    background: white;
+    color:black;
+}
+
+h1.nameTitle{
+    font-size: 18px;
+    padding-left: 10px;
+   
+}
+.imageBox{
+    height: 64px;
+    background: rgb(223, 223, 223);
+    padding: 30px;
+    margin: 4px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+img.inImg{
+    width: 100px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.codeTitle{
+    position: absolute;
+    top: 0;
+    right: 4%;
+    border-radius: 5px;
+    font-size: 14px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+}
+/* ------------------------------------ - ----------------------------------- */
+.sidedetails{
+    background: white;
+    width: 30%;
+    height: max-content;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: block;
+}
+button.btnCount:focus{
+background: rgb(193, 189, 189);
+border: white 1px solid;
+}
+.optionSide{
+    width: 100%;
+    height: 6vh;
+    /* background: rgb(222, 117, 117); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+   
+}
+.optionSide h1{
+    font-size: 16px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+button#reset{
+    border: 1px solid grey;
+    background: none;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: poppins;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.allProductListBox{
+    width: 100%;
+    height: 54vh;
+    overflow-y: auto;   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+.allProductListBox::-webkit-scrollbar {
+    width: 4px; 
+}
+
+.allProductListBox::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.allProductListBox::-webkit-scrollbar-thumb {
+    background-color: #2002ff; 
+    border-radius: 1px;
+}
+
+.checkOut{
+    width: 100%;
+    height: 20vh;
+    background: rgb(223, 244, 244);
+    margin-bottom: 10px;
+}
+.paymentBtns{
+    width: 100%;
+    height: 5vh;
+    background: rgb(236, 211, 211);
+}
+
+
+.sideProducts{
+    width: 92%;
+    margin-top: 5px;
+    height: max-content;
+    /* background: rgb(202, 194, 194); */
+    margin-bottom: 20px;
+    padding: 10px;   
+    border: 1px grey solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+}
+
+img.sideItemImage{
+    width: 60px;
+    height: 120px;
+    border: 1px solid grey;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+.sideTextBox{
+    width: 70%;
+    height: 120px;
+    /* background: rgb(245, 180, 180); */
+    position: relative;
+ 
+}
+.sideProductTitle{
+    font-size: 24px;
+    position: absolute;
+    top: -16%;
+
+  
+}
+.sideProductType{
+    margin-top: 36px;
+    font-size: 12px;
+    border: 1px solid rgb(214, 211, 211);
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.countBox{
+    width: 110%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;  
+}
+.counter{
+    width: 103px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+.cUp,.cDown{
+    cursor: pointer;
+    border:1px solid grey;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 4px 8px;
+    font-weight: bold;
+
+}
+.sideCost{
+font-size: 24px;
+}
+
+.cancelBtn{
+    position: absolute;
+    right: 3%;
+    border: none;
+    border-radius: 4px;
+    background: rgb(243, 45, 45);
+    color: white;
+    cursor: pointer;
+}
+#open{
+    display: none;
+}
+button#removeSide{
+    background: rgb(238, 177, 177);
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width:1080px){
+    .sidedetails{
+        display: none;
+        position: absolute;
+        width: 350px;
+    }
+    #open{
+        display: block;  
+    }
+    .cats{
+        margin-bottom: 20px;
+    }
+    img.inImg{
+        width: 140px;
+    }
+    button#removeSide{
+        display: block;
+    }
+    .notifyCard{
+        width: 70vw;
+        right: 10%;
+        font-size: 20px;
+    }
+}

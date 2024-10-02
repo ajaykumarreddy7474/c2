@@ -1,0 +1,20 @@
+[
+    { "id": 1, "price": 4.00, "menuTitle": "Fuel", "image": "/imgsd/b1.jpg","code":"Modern" },
+    { "id": 2, "price": 3.30, "menuTitle": "Tartarus", "image": "/imgsd/b2.jpg","code":"Modern" },
+    { "id": 3, "price": 2.25, "menuTitle": "HyperSpace", "image": "/imgsd/b3.jpg","code":"Modern" },
+    { "id": 4, "price": 3.10, "menuTitle": "Hospital", "image": "/imgsd/b4.jpg","code":"Modern" },
+    { "id": 5, "price": 5.25, "menuTitle": "Pepsi", "image": "/imgsd/b5.jpg","code":"Coke" },
+    { "id": 6, "price": 1.20, "menuTitle": "Sprite", "image": "/imgsd/b6.jpg","code":"Limes" },
+    { "id": 7, "price": 2.32, "menuTitle": "ThumbsUp", "image": "/imgsd/b7.png","code":"Coke" },
+    { "id": 8, "price": 5.22, "menuTitle": "CocaCola", "image": "/imgsd/b8.png","code":"Coke" },
+    { "id": 9, "price": 3.12, "menuTitle": "MountainDew", "image": "/imgsd/b9.png","code":"Energy" },
+    { "id": 10, "price": 4.18, "menuTitle": "Limca", "image": "/imgsd/b10.png","code":"Limes" },
+    { "id": 11, "price": 1.12, "menuTitle": "RedBull", "image": "/imgsd/b11.png","code":"Energy" },
+    { "id": 12, "price": 5.30, "menuTitle": "Monster", "image": "/imgsd/b12.png","code":"Energy" },
+    { "id": 13, "price": 2.12, "menuTitle": "Balance", "image": "/imgsd/b13.png","code":"Energy" },
+    { "id": 14, "price": 3.24, "menuTitle": "Fanta", "image": "/imgsd/b14.png","code":"Limes" },
+    { "id": 15, "price": 4.00, "menuTitle": "Astra", "image": "/imgsd/b15.png","code":"Limes" },
+    { "id": 16, "price": 6.32, "menuTitle": "Rojita", "image": "/imgsd/b16.png","code":"Modern" },
+    { "id": 17, "price": 2.1, "menuTitle": "Uchie", "image": "/imgsd/b17.png","code":"Modern" }
+  ]
+  
