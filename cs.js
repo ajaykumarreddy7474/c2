@@ -29,7 +29,7 @@ let tax=document.querySelector('.tax span')
 let totalPay=document.querySelector('.totalPay span')
 
 /* ------------------------------------ - ----------------------------------- */
-discount.textContent = '3'  ;
+discount.textContent = '20'  ;
 function updateSubTotal() {
   let subtotal = 0;
 
@@ -41,19 +41,19 @@ function updateSubTotal() {
   });
 
 
-  SubTotal.textContent = subtotal.toFixed(2);
+  SubTotal.textContent ='$'+subtotal.toFixed(2);
 
 
   const taxAmount = subtotal * (parseFloat(tax.textContent) / 100);
   const discountAmount = subtotal * (parseFloat(discount.textContent) / 100);
-  totalPay.textContent = (subtotal + taxAmount - discountAmount).toFixed(2);
+  totalPay.textContent ='$'+ (subtotal + taxAmount - discountAmount).toFixed(2);
 }
 
 removeSide.addEventListener('click',()=>{
   sidedetails.style.display='none'
 })
 
-console.log(removeSide)
+
 
 open.addEventListener('click',()=>{
   sidedetails.style.display='block'

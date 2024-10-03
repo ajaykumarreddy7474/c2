@@ -87,6 +87,7 @@ cursor: pointer;
     height: 90%;
     border-radius: 5px;
     box-sizing: border-box;
+
 }
 
 .itemsCase {
@@ -383,7 +384,7 @@ button#removeSide{
         margin-bottom: 20px;
     }
     img.inImg{
-        width: 140px;
+        width: 80px;
     }
     button#removeSide{
         display: block;
@@ -393,4 +394,19 @@ button#removeSide{
         right: 10%;
         font-size: 20px;
     }
+    .checkOut{
+        line-height: 2px;
+
+    }
+    .sidedetails{
+position: fixed;
+width: 90%;
+    }
+    .itemsCase {
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px; 
+       
+    }
+    
 }
