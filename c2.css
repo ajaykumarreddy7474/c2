@@ -29,9 +29,17 @@ body{
 }
 
 .nav{
+    position: relative;
     width: 99vw;
     height: 7vh;
-    background: rgb(237, 224, 208);
+    /* background: rgb(237, 224, 208); */
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav h1{
+    font-family: stretch pro
 }
 
 .whole{
@@ -340,6 +348,14 @@ font-size: 24px;
 }
 #open{
     display: none;
+    border: none;
+    background: black;
+    color:white;
+    padding: 10px 20px;
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+
 }
 button#removeSide{
     background: rgb(238, 177, 177);
@@ -408,5 +424,7 @@ width: 90%;
         gap: 10px; 
        
     }
-    
+    .nav{
+        width: 100%;
+    }
 }
